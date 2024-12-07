@@ -1,0 +1,513 @@
+*{
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+/*COLOR OPTIONS:
+#161B3B TEXT COLOR (DARK blue)
+#C3DCE9 HEADER/FOOTER Color (light light blue)
+#F6F0ED background of main areas (light creme)
+#CE7B91 Pinkish color for buttons and stuff
+#2274A5 Medium blue for buttons and such
+*/
+
+/***********************************-----FONT-----**********************/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+.font *{
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 325;
+  font-style: normal;
+}
+
+/***********************************---HEADER/P---**********************/
+/*Make 60pt*/
+h1{
+  color:#161B3B;
+  font-weight: bold;
+  font-size: 4rem;
+}
+/*Make 48pt*/
+h2{
+  color: #161B3B;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+}
+/*Make 30pt*/
+h3{
+  color: #161B3B;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 5px;
+  text-align: center;
+}
+/*Make 24pt*/
+h4{
+  color: #161B3B;
+  font-weight: bold;
+  font-size:1.25rem;  
+
+}
+/*Make 18pt*/
+p{
+  color: #161B3B;
+  font-size: 1rem;
+}
+
+/***********************************-Buttons-**********************/
+
+.primary-button{
+  background-color: #2274A5;
+  color:#F6F0Ed;
+  border: none;
+  height: auto;
+  width:auto;
+  border-radius: 10px;
+  font-size: 1.75rem;
+  padding: 10px;
+  cursor: pointer;
+
+}
+
+.primary-button:focus, .primary-button:hover{
+  background-color: #F6F0Ed;
+  color: #2274A5;
+}
+
+.secondary-button{
+  background-color:#161B3B;
+  color: #F6F0Ed;
+  border: none;
+  width:auto;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.secondary-button:focus, .secondary-button:hover{
+  background-color:#C3DCE9;
+  color:#161B3B;
+}
+
+
+/***********************************-Easy Color Change-**********************/
+.white-text p{
+  color:#F6F0Ed;
+}
+
+
+/***********************************-----BODY-----**********************/
+body{
+  display: grid;
+  background-color: #FFFAFA;
+  grid-template-columns: 1;
+  grid-template-rows: auto;
+  grid-gap:.5rem;
+  margin: 0px;
+  grid-template-areas: "header"
+                       "main"
+                       "footer";
+  
+}
+/***********************************-----Header/Nav-----**********************/
+header{
+  grid-area: header;
+  background-color: #C3DCE9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+}
+
+.title-pad{
+  padding: 5px 10px;
+  margin: 0px;
+}
+
+nav{
+  padding: 5px;
+  margin: 0px;
+}
+ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  margin: 0;
+  font-size: 1.25rem;
+}
+li a{
+  color:#161B3B;
+  text-decoration: none;
+}
+
+
+
+
+
+/***********************************-----MAIN-----**********************/
+.main-container{
+  grid-area: main;
+  background-color: #FFFAFA;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr;
+
+  grid-template-areas:"img"
+                      "text"
+                      "facts"
+                      "education"
+                      ;
+}
+
+.main-img-container{
+  grid-area: img;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-img{
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+.main-txt{
+  grid-area: text;
+}
+
+/**************************************-----MAIN EDUCATION -----**********************/
+.education{
+  grid-area: education;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-txt{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.section-logos{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+
+.unc-logo{
+  height: 175px;
+  width: 175px;
+}
+
+.logo{
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 25px;
+}
+
+.ccd-logo{
+  height: 175px;
+  width: 175px;
+  border-radius: 100px;
+}
+
+
+/***********************************-----ASIDE/FACTS----**********************/
+aside{
+  grid-area: facts;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.quick-fact{
+  height: 200px;
+  background-color: #2274A5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 5px #161B3B;
+
+}
+.quick-fact *{
+  color:#F6F0Ed;
+  text-align: center;
+  margin: 0px 0px 20px 0px;
+
+}
+
+/***********************************-----Cards and such for academic/experience----**********************/
+.academics-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:"biostat"
+                      "math"
+                      "other";
+}
+
+.biostat{
+  grid-area: biostat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+
+}
+
+.class-card{
+  display: flex;
+  height: auto;
+  background-color: #C3DCE9;
+  color: #161B3B;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  box-shadow: 1px 1px 5px #161B3B;
+
+}
+.math{
+  grid-area: math;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.math>h2{
+  margin: 5px;
+  padding: 0px;
+}
+.math>p{
+  margin: 0px;
+  padding: 0px;
+}
+
+.no-background{
+  background-color:#161B3B
+}
+
+.other{
+  grid-area: other;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.experience-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:"camp"
+                      "ca"
+                      "conduct";
+}
+
+.camp{
+  grid-area: camp;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ca{
+  grid-area: ca;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.conduct{
+  grid-area: conduct;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%
+}
+
+.logo-card{
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.exp-img{
+  fill: cover;
+  height: 200px;
+}
+
+
+
+
+/***********************************-----FOOTER-----**********************/
+
+footer{
+  grid-area: footer;
+  background-color: #C3DCE9;
+  color:#F6F0Ed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.125rem;
+}
+
+
+/***********************************-----Media Quieries!!-----**********************/
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 750px){
+  /***********************************-----About me changes-----**********************/
+
+  header{
+    flex-direction: row;
+  }
+  .main-container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:"img text"
+                        "img education"
+                        "facts facts";
+
+  }
+
+  .main-img{
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .quick-fact{
+    overflow: auto;
+    height: auto;
+  }
+
+  aside{
+    flex-direction: row;
+  }
+  
+  footer{
+    flex-direction: column;
+    margin: 0px;
+  }
+  .main-img-container{
+    width: 100%;
+  }
+  
+
+    /***********************************-----Academics CHanges-----**********************/
+    
+
+    .card-container{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+    }
+
+    .class-card{
+      max-width: 300px;
+      height: 300px;
+    }
+
+    /***********************************-----Experience CHanges-----**********************/
+
+    .logo-card{
+      width: 100%;
+      height: 300px;
+    }
+    .exp-img{
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      object-fit: cover;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+
+  /***********************************-----About me changes-----**********************/
+
+  .main-container{
+    grid-template-columns: 1fr 1fr .75fr;
+    grid-template-rows: auto;
+    grid-template-areas:"img text facts"
+                        "img text facts"
+                        "img education facts";
+  }
+
+  .main-img{
+    width: 100%;
+    min-width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  .main-img-container{
+    width: 100%;
+    height: 100%;
+  }
+
+  aside{
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .quick-fact{
+    min-width: 200px;
+  }
+
+  p{
+    font-size: 1.25rem;
+  }
+
+
+
+/***********************************-----Academics CHanges-----**********************/
+      .class-card{
+        max-width: 375px;
+        height: 375px;
+      }
+
+/***********************************-----Experience Changes CHanges-----**********************/
+
+
+
+
+}
+
+
+
+
+
